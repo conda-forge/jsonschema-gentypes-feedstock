@@ -15,8 +15,6 @@ source:
 build:
   noarch: python
   script:
-    # trust ``poetry``-generated ``setup.py``
-    - {{ PYTHON }} -c "__import__('pathlib').Path('dist/pyproject.toml').unlink()"
     - cd dist && {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
@@ -24,6 +22,9 @@ build:
 
 requirements:
   host:
+    - poetry-core >=1.0.0
+    - poetry-dynamic-versioning
+    - poetry-plugin-tweak-dependencies-version
     - python >=3.8
     - pip
   run:
