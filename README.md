@@ -1,11 +1,11 @@
-About jsonschema-gentypes
-=========================
+About jsonschema-gentypes-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonschema-gentypes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/camptocamp/jsonschema-gentypes
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonschema-gentypes-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tool to generate Python types based on TypedDict from a JSON Schema
 
