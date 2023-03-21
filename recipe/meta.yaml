@@ -51,7 +51,7 @@ about:
   home: https://github.com/camptocamp/jsonschema-gentypes
   summary: Tool to generate Python types based on TypedDict from a JSON Schema
   license: BSD-2-Clause
-  license_file: src/LICENSE.txt
+  license_file: dist/LICENSE
 
 extra:
   recipe-maintainers:
