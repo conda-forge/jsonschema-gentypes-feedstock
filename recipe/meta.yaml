@@ -28,9 +28,12 @@ requirements:
     - python >=3.8
     - pip
   run:
-    - python >=3.8
     - jsonschema
-    - ruamel.yaml
+    - python >=3.8
+    - pyyaml
+    - referencing
+    - typing-extensions
+    - requests
 
 test:
   source_files:
