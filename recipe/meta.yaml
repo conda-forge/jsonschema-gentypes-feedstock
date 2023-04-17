@@ -15,14 +15,14 @@ source:
 build:
   noarch: python
   script:
-    - cd dist && {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+    - cd dist && {{ PYTHON }} -m poetry build && pip install jsonschema-gentypes --find-links dist --no-index
   number: 0
   entry_points:
     - jsonschema-gentypes = jsonschema_gentypes.cli:main
 
 requirements:
   host:
-    - poetry-core >=1.0.0
+    - poetry >=1.0.0
     - poetry-dynamic-versioning
     - poetry-plugin-tweak-dependencies-version
     - python >=3.8
