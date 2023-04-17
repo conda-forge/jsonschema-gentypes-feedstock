@@ -15,7 +15,7 @@ source:
 build:
   noarch: python
   script:
-    - cd dist && {{ PYTHON }} -m poetry build && pip install jsonschema-gentypes --find-links dist --no-index
+    - cd dist && {{ PYTHON }} -m poetry build && pip install jsonschema-gentypes --find-links dist --no-index --no-deps
   number: 0
   entry_points:
     - jsonschema-gentypes = jsonschema_gentypes.cli:main
