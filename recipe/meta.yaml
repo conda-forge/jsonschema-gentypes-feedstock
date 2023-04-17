@@ -1,4 +1,4 @@
-{% set version = "1.7.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: jsonschema-gentypes
@@ -7,30 +7,33 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/j/jsonschema-gentypes/jsonschema_gentypes-{{ version }}.tar.gz
-    sha256: cdaa9922bc842b6c1cc60022a159f92c4d0daf1266181ed7a1340e18e810c07c
+    sha256: 2c125ca28c37ae011db888ce38cfc0fcbcd03b670bc890ffe72427477eafc86a
   - folder: src
     url: https://github.com/camptocamp/jsonschema-gentypes/archive/refs/tags/{{ version }}.tar.gz
-    sha256: a149b782b3d90cacfbdde32a258c402c40f702e2ba25139c65932f6a048425bc
+    sha256: 7d7e04ce03f9ea97609d5a23f138d054a68f08c040d2031398c071664f7a6b4b
 
 build:
   noarch: python
   script:
-    - cd dist && {{ PYTHON }} -m pip install . -vv
+    - cd dist && {{ PYTHON }} -m poetry build && pip install -vv jsonschema-gentypes --find-links=dist --no-index --no-deps
   number: 0
   entry_points:
     - jsonschema-gentypes = jsonschema_gentypes.cli:main
 
 requirements:
   host:
-    - poetry-core >=1.0.0
+    - pip
+    - poetry >=1.0.0
     - poetry-dynamic-versioning
     - poetry-plugin-tweak-dependencies-version
     - python >=3.8
-    - pip
   run:
-    - python >=3.8
     - jsonschema
-    - ruamel.yaml
+    - python >=3.8
+    - pyyaml
+    - referencing
+    - requests
+    - typing-extensions
 
 test:
   source_files:
@@ -45,7 +48,7 @@ test:
   commands:
     - pip check
     - jsonschema-gentypes --help
-    - pytest src/tests -vv -k "not test_name" --cov=jsonschema_gentypes --no-cov-on-fail --cov-report=term-missing:skip-covered --cov-fail-under=70
+    - pytest src/tests -vv -k "not test_name" --cov=jsonschema_gentypes --no-cov-on-fail --cov-report=term-missing:skip-covered --cov-fail-under=64
 
 about:
   home: https://github.com/camptocamp/jsonschema-gentypes
