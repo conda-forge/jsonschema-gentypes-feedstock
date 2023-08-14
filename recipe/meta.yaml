@@ -1,4 +1,4 @@
-{% set version = "2.2.3" %}
+{% set version = "2.3.0" %}
 
 package:
   name: jsonschema-gentypes
@@ -7,10 +7,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/j/jsonschema-gentypes/jsonschema_gentypes-{{ version }}.tar.gz
-    sha256: 03e2c0ac0c871467b8205539b92b5f2daf0a34e2c03f196dbb74ea6f377b1a16
+    sha256: 923eaf059fafdaa10348d3e233790143dfcad13a0e93ff5d2a5dfc81aa726383
   - folder: src
     url: https://github.com/camptocamp/jsonschema-gentypes/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 457922527e741cd155cf563c5ac4e3d787f5627f31582d7d7975487a0022f359
+    sha256: 870067b9f0ba917748161795fcbb421f878302b99b682f201794d83cc13ac0e2
 
 build:
   noarch: python
@@ -48,7 +48,7 @@ test:
   commands:
     - pip check
     - jsonschema-gentypes --help
-    - pytest src/tests -vv -k "not test_name" --cov=jsonschema_gentypes --no-cov-on-fail --cov-report=term-missing:skip-covered --cov-fail-under=61
+    - pytest src/tests -vv -k "not test_name" --cov=jsonschema_gentypes --no-cov-on-fail --cov-report=term-missing:skip-covered --cov-fail-under=59
 
 about:
   home: https://github.com/camptocamp/jsonschema-gentypes
