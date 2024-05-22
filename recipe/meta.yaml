@@ -26,10 +26,10 @@ requirements:
     - poetry >=1.0.0
     - poetry-dynamic-versioning
     - poetry-plugin-tweak-dependencies-version
-    - python >=3.8
+    - python >=3.9
   run:
     - jsonschema
-    - python >=3.8
+    - python >=3.9
     - pyyaml
     - referencing
     - requests
