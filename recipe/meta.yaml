@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
   name: jsonschema-gentypes
@@ -7,10 +7,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/j/jsonschema-gentypes/jsonschema_gentypes-{{ version }}.tar.gz
-    sha256: c5d9697c277a3319db84045c2677de92b02c4848605061f32a4695f00f0884ab
+    sha256: f811689608a62d9ea9c4982c2eedafe397cc83be8f5ee765cd512f4a6e89f0b8
   - folder: src
     url: https://github.com/camptocamp/jsonschema-gentypes/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 0ec9d7159fe033538c8d7224c49ed92ae889f56d280d17f2da2da8f1cde45b5d
+    sha256: 6842ad2f3f18ef12ca51858336920378908b82f476cd04160d103cfd49d815fb
 
 build:
   noarch: python
