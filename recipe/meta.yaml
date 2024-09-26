@@ -24,6 +24,7 @@ requirements:
   host:
     - pip
     - poetry >=1.0.0
+    - poetry-core
     - poetry-dynamic-versioning
     - poetry-plugin-tweak-dependencies-version
     - python >=3.9
