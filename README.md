@@ -3,7 +3,7 @@ About jsonschema-gentypes-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonschema-gentypes-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/camptocamp/jsonschema-gentypes
+Home: https://github.com/sbrunner/jsonschema-gentypes
 
 Package license: BSD-2-Clause
 
