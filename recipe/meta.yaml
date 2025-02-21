@@ -1,4 +1,4 @@
-{% set version = "2.9.3" %}
+{% set version = "2.10.0" %}
 
 {% set python_min = python_min | default("3.9") %}
 
@@ -9,10 +9,10 @@ package:
 source:
   - folder: dist
     url: https://pypi.org/packages/source/j/jsonschema-gentypes/jsonschema_gentypes-{{ version }}.tar.gz
-    sha256: 3ff49735aba5bd23e7f736e3553444226defdafe89a83dc2f2c6799a6d500f34
+    sha256: 44370063298ebe7ddc8af300d7e4f69ab68cc142e73aa700b8d7ade1291f44b2
   - folder: src
     url: https://github.com/camptocamp/jsonschema-gentypes/archive/refs/tags/{{ version }}.tar.gz
-    sha256: d5e5d3d39804b623a8fe9fa274058c4c4ec755e70a45aebf922e41eba8ac6089
+    sha256: 6de92b12ddf7ce0586bd992794e0e7f106c26e10f4e7871f36c0bc7f2f5a08a5
 
 build:
   noarch: python
