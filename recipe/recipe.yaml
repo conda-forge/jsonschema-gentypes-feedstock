@@ -21,8 +21,7 @@ build:
   noarch: python
   script:
     - cd dist
-    - ${{ PYTHON }} -m poetry build
-    - ${{ PYTHON }} -m pip install -vv jsonschema-gentypes --find-links=dist --no-index --no-deps
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - jsonschema-gentypes = jsonschema_gentypes.cli:main
@@ -30,8 +29,7 @@ build:
 requirements:
   host:
     - pip
-    - poetry >=1.0.0
-    - poetry-core
+    - poetry-core >=1.0.0
     - poetry-dynamic-versioning
     - poetry-plugin-tweak-dependencies-version
     - python ${{ python_min }}.*
