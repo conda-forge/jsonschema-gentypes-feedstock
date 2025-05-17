@@ -41,10 +41,11 @@ requirements:
 
 tests:
   - python:
+      imports: jsonschema_gentypes
       pip_check: true
-      python_version: ${{ python_min }}.*
-      imports:
-        - jsonschema_gentypes
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
   - files:
       source:
         - src/tests/
