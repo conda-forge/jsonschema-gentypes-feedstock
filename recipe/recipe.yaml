@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.12.0"
+  version: "2.13.0"
 
 package:
   name: jsonschema-gentypes
@@ -11,10 +11,10 @@ package:
 source:
   # use upstream wheel due to hopeless mess of hard-pinned poetry(-core) plugins
   - url: https://pypi.org/packages/py3/j/jsonschema-gentypes/jsonschema_gentypes-${{ version }}-py3-none-any.whl
-    sha256: e2a9175fc4be997becb40dce8c360569ac6bf2b09925ce06115bc438dd777749
+    sha256: 0e9e9d82a273911e1bb4cab374699119f6a53c984e41623e773eba83e36076be
     file_name: jsonschema_gentypes-${{ version }}-py3-none-any.whl
   - url: https://github.com/camptocamp/jsonschema-gentypes/archive/refs/tags/${{ version }}.tar.gz
-    sha256: a4039da09e64a65d8f9fec729b14a9fd9ac7a6e295012a1cbce31b3fec89a293
+    sha256: e8700160f27f6047055f44062e67e1fc65ec282e2d41e8c758830746fd30ad3b
     target_directory: src
 
 build:
