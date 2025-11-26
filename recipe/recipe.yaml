@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "2.13.0"
+  python_check_max: "3.14"
 
 package:
   name: jsonschema-gentypes
@@ -37,7 +38,7 @@ requirements:
     - pyyaml
     - referencing
     - requests
-    - typing-extensions
+    - typing_extensions
 
 tests:
   - python:
@@ -45,7 +46,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - files:
       source:
         - src/tests/
